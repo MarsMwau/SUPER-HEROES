@@ -16,7 +16,7 @@ The server should now be running at `http://localhost:3000`.
 
 ## Technologies Used
 - Ruby on Rails
-- SQLLITE
+- SQLite
 
 ## CRUD Methods
 ### Hero Model
