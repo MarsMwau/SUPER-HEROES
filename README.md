@@ -1,24 +1,39 @@
-# README
+# Heroes API
+### Author : Martha Mwau (2023)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+This is a Rails API application that allows you to manage superheroes and their powers.
 
-Things you may want to cover:
+## Setup
+To clone the project and get it running on your machine, follow these steps:
+1. Clone the repository: `git clone https://github.com/your_username/heroes-api.git`
+2. Install dependencies: `bundle install`
+3. Create the database: `rails db:create`
+4. Run the migrations: `rails db:migrate`
+5. Seed the database: `rails db:seed`
+6. Start the server: `rails s`
+The server should now be running at `http://localhost:3000`.
 
-* Ruby version
+## Technologies Used
+- Ruby on Rails
+- SQLLITE
 
-* System dependencies
+## CRUD Methods
+### Hero Model
+- Read:
+  - All heroes: `GET /heros`
+  - Single hero: `GET /heros/:id`
+### Power Model
+- Read:
+  - All powers: `GET /powers`
+  - Single power: `GET /powers/:id`
+- Update: `PATCH /powers/:id`
+### Hero_Power Model
+- Create: `POST /hero_powers`
+- Delete: `DELETE /hero_powers/:id`
 
-* Configuration
+## Contact Information
+If you have any questions or concerns, please contact me at marthamumbua16@gmail.com
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
