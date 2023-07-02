@@ -5,3 +5,39 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require 'faker'
+
+puts "🌱 Start Seeding data..."
+
+# Create 10 heroes
+puts "🌱 Start Seeding Hero Data..."
+20.times do
+  hero = Hero.create(
+    name: Faker::Superhero.name,
+    super_name: Faker::Superhero.descriptor
+  )
+
+  # Create 10 powers
+  puts "🌱 Start Seeding Powers Data..."
+  powers = []
+  20.times do
+    powers << Power.create(
+      name: Faker::Superhero.power,
+      description: Faker::Superhero.power.capitalize + " " + Faker::Hacker.verb + " " + Faker::Hacker.noun
+    )
+  end
+  
+
+  # Give each hero between 1 and 3 powers
+  puts "🌱 Start Seeding HeroPowers Data..."
+  rand(1..3).times do
+    power = powers.sample
+
+    HeroPower.create(
+      hero_id: hero.id,
+      power_id: power.id,
+      strength: %w[Strong Weak Average].sample
+    )
+  end
+end
