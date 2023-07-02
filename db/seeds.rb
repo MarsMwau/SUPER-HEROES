@@ -24,10 +24,9 @@ puts "🌱 Start Seeding Hero Data..."
   20.times do
     powers << Power.create(
       name: Faker::Superhero.power,
-      description: Faker::Superhero.power.capitalize + " " + Faker::Hacker.verb + " " + Faker::Hacker.noun
+      description: "Grants the wielder the power of #{Faker::Superhero.power}, allowing them to #{Faker::Superhero.power}"
     )
   end
-  
 
   # Give each hero between 1 and 3 powers
   puts "🌱 Start Seeding HeroPowers Data..."
@@ -41,3 +40,4 @@ puts "🌱 Start Seeding Hero Data..."
     )
   end
 end
+puts "🌱 Done Seeding Data..."
