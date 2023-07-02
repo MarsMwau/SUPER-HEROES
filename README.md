@@ -2,7 +2,7 @@
 ### Author : Martha Mwau (2023)
 
 ## Description
-This is a Rails API application that allows you to manage superheroes and their powers.
+This is a Rails API application that provides endpoints for managing and retrieving information about superheroes and their powers. It allows developers to interact with the API to perform CRUD operations on heroes, powers, and hero_power associations. 
 
 ## Setup
 To clone the project and get it running on your machine, follow these steps:
